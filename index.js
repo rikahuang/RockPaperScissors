@@ -74,71 +74,76 @@ function confirmCharacter(characterConfd) {
 }
 
 function playerAttack(attackChoice) {
-    var playerMove;
-    if (attackChoice=="1") {
-        playerMove = "Rock";
-        var paper = document.getElementById("paperAttack");
-        var scissor = document.getElementById("scissorAttack");
-        paper.classList.add("hide");
-        scissor.classList.add("hide");
-    } else if (attackChoice=="2") {
-        playerMove = "Paper";
-        var rock = document.getElementById("rockAttack");
-        var scissor = document.getElementById("scissorAttack");
-        rock.classList.add("hide");
-        scissor.classList.add("hide");
-    } else if (attackChoice=="3") {
-        playerMove = "Scissors";
-        var rock = document.getElementById("rockAttack");
-        var paper = document.getElementById("paperAttack");
-        rock.classList.add("hide");
-        paper.classList.add("hide");
+
+    var blackBar = document.getElementById("playAgain");
+    if (blackBar.classList.contains("hide")) {
+        // when there is playagain bar, shouldn't evaluate player attack
+        var playerMove;
+        if (attackChoice=="1") {
+            playerMove = "Rock";
+            var paper = document.getElementById("paperAttack");
+            var scissor = document.getElementById("scissorAttack");
+            paper.classList.add("hide");
+            scissor.classList.add("hide");
+        } else if (attackChoice=="2") {
+            playerMove = "Paper";
+            var rock = document.getElementById("rockAttack");
+            var scissor = document.getElementById("scissorAttack");
+            rock.classList.add("hide");
+            scissor.classList.add("hide");
+        } else if (attackChoice=="3") {
+            playerMove = "Scissors";
+            var rock = document.getElementById("rockAttack");
+            var paper = document.getElementById("paperAttack");
+            rock.classList.add("hide");
+            paper.classList.add("hide");
+        }
+        
+        var computerUnknown = document.getElementById("compAttack");
+        computerUnknown.classList.add("hide");
+
+        var randomMove = Math.floor(Math.random() * 3);
+
+        var namePlz = document.getElementById("playerName");
+        var computerMove;
+        if (namePlz.innerHTML.toUpperCase()=="PETE" || namePlz.innerHTML.toUpperCase()=="PETER") {
+            computerMove = peteLoses(playerMove);
+        } else if (namePlz.innerHTML.toUpperCase()=="RIKA" || namePlz.innerHTML.toUpperCase()=="RIRI") {
+            computerMove = ririWins(playerMove);
+        } else {
+            computerMove = rpsMoves[randomMove];
+        }
+
+        if (computerMove=="Rock") {
+            var rock = document.getElementById("rockAttackComp");
+            rock.classList.remove("hide");
+        } else if (computerMove=="Paper") {
+            var paper = document.getElementById("paperAttackComp");
+            paper.classList.remove("hide");
+        } else if (computerMove=="Scissors") {
+            var scissors = document.getElementById("scissorsAttackComp");
+            scissors.classList.remove("hide");
+        }
+
+        var finalResult = evaluator(playerMove, computerMove);
+
+        if (finalResult=="DRAW") {
+            var draw = document.getElementById("drawResult");
+            draw.classList.remove("hide");
+        } else if (finalResult=="WIN") {
+            playerWins();
+            var win = document.getElementById("winResult");
+            win.classList.remove("hide");
+        } else if (finalResult=="LOSE") {
+            computerWins();
+            var lose = document.getElementById("loseResult");
+            lose.classList.remove("hide");
+        }
+
+        var playAgain = document.getElementById("playAgain");
+        playAgain.classList.remove("hide");
+
     }
-    
-    var computerUnknown = document.getElementById("compAttack");
-    computerUnknown.classList.add("hide");
-
-    var randomMove = Math.floor(Math.random() * 3);
-
-    var namePlz = document.getElementById("playerName");
-    var computerMove;
-    if (namePlz.innerHTML.toUpperCase()=="PETE" || namePlz.innerHTML.toUpperCase()=="PETER") {
-        computerMove = peteLoses(playerMove);
-    } else if (namePlz.innerHTML.toUpperCase()=="RIKA" || namePlz.innerHTML.toUpperCase()=="RIRI") {
-        computerMove = ririWins(playerMove);
-    } else {
-        computerMove = rpsMoves[randomMove];
-    }
-
-    if (computerMove=="Rock") {
-        var rock = document.getElementById("rockAttackComp");
-        rock.classList.remove("hide");
-    } else if (computerMove=="Paper") {
-        var paper = document.getElementById("paperAttackComp");
-        paper.classList.remove("hide");
-    } else if (computerMove=="Scissors") {
-        var scissors = document.getElementById("scissorsAttackComp");
-        scissors.classList.remove("hide");
-    }
-
-    var finalResult = evaluator(playerMove, computerMove);
-
-    if (finalResult=="DRAW") {
-        var draw = document.getElementById("drawResult");
-        draw.classList.remove("hide");
-    } else if (finalResult=="WIN") {
-        playerWins();
-        var win = document.getElementById("winResult");
-        win.classList.remove("hide");
-    } else if (finalResult=="LOSE") {
-        computerWins();
-        var lose = document.getElementById("loseResult");
-        lose.classList.remove("hide");
-    }
-
-    var playAgain = document.getElementById("playAgain");
-    playAgain.classList.remove("hide");
-
 }
 
 function evaluator(playerMove, computerMove) {

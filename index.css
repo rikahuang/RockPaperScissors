@@ -1,0 +1,298 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+
+}
+
+.cursorStyle {
+    cursor: pointer;
+}
+
+.cursorDefault {
+    cursor: default;
+}
+
+.hide {
+    display: none !important;
+}
+
+/*FIRST PAGE BELOW*/
+
+.centerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 250px;
+}
+
+.leftBox {
+    padding-right: 100px;
+}
+
+.rightBox {
+    padding-left: 100px;
+}
+
+/*SECOND PAGE BELOW */
+
+.pgTwoMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.yourName {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    font-size: 150px;
+    background-color: black;
+    text-align: center;
+}
+
+::placeholder {
+    color: white;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+input:focus {
+    outline: none;
+}
+
+
+/*THIRD PAGE BELOW*/
+
+.pgThreeMain {
+    height: 100vh;
+}
+
+.characterSlt {
+    font-size: 50px;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portBorder {
+    border: 6px white solid;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+}
+
+.characterPics {
+    display: flex;
+    justify-content: center;
+    height: 40%;
+}
+
+.hippo {
+    background-color: rgb(255 81 113);
+}
+
+.dragon {
+    background-color: rgb(129 189 129);
+}
+
+.bird {
+    background-color:rgb(34 142 177);
+}
+
+.leftCharBox {
+    margin-right: 80px;
+}
+
+.rightCharBox {
+    margin-left: 80px;
+}
+
+.confirm {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*FOURTH PAGE BELOW*/
+
+.pageFourMain {
+    height: 100%;
+    background-image: url("12_sfback07.jpg");
+}
+
+.line {
+    width: 10px;
+    height: 625px;
+    background-color: white;
+}
+
+.result {
+    position: absolute;
+    z-index: 100;
+}
+
+.frtPageWrap {
+    height: 85%;
+}
+
+.centerBox4 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.bothSides {
+    width: 47.5%;
+    text-align: center;
+    font-size: 150px;
+}
+
+.lineSide {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.resultsBar {
+    height: 15%;
+    width: 100vw;
+    display: flex;
+    align-items: end;
+}
+
+.leftChar {
+    width: 9%;
+    display: flex;
+    justify-content: right;
+}
+
+.CharPortrait {
+    background-color: rgb(0, 0, 0);
+    border: solid white 6px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.draGon {
+    font-size: 80px;
+}
+
+.leftCharPt2 {
+    width: 38%;
+    height: 112px;
+}
+
+.maBob {
+    height: 35px;
+}
+
+.leftPad {
+    padding-left: 50px;
+    font-size: 30px;
+}
+
+.rightPad {
+    padding-right: 50px;
+    font-size: 30px;
+}
+
+.healthBar {
+    height: 30px;
+    width: 100%;
+    background-color: rgb(255 223 0);
+    border-top: solid white 6px;
+    border-bottom: solid white 6px;
+}
+
+.resultsMid {
+    width: 6%;
+    display: flex;
+    justify-content: center;
+}
+
+.midPortrait {
+    background-color: rgb(0, 0, 0);
+    border: solid white 6px;
+    width: 100px;
+    height: 100px;
+}
+
+.midPortrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultsNumber {
+    font-size: 80px;
+}
+
+.rightCharPt2 {
+    width: 38%;
+    text-align: right;
+    height: 112px;
+}
+
+.rightChar {
+    width: 9%;
+    display: flex;
+    justify-content: left;
+}
+
+.roBot {
+    font-size: 80px;
+}
+
+.playerResult {
+    position: absolute;
+    z-index: 100;
+    width: 50vw;
+    font-size: 100px;
+    text-align: center;
+    margin-bottom: 500px;
+    font-style: italic;
+
+}
+
+.win {
+    color: rgb(128, 233, 126);
+}
+
+.lose {
+    color: rgb(255, 77, 77);
+}
+
+.draw {
+    color: rgb(0,0,0);
+}
+
+.playAgain {
+    position: absolute;
+    z-index: 100;
+    width: 100vw;
+    text-align: center;
+    background-color: black;
+    font-size: 50px;
+    margin-top: 400px;
+}
+

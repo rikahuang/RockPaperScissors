@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link href="RPS.css" rel="stylesheet"/>
+        <script type="text/javascript" src="RPS.js"></script>
+        <script src="https://kit.fontawesome.com/73ee127a71.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+<!---------------------FIRST PAGE BELOW----------------------->
+
+        <div id="pageOne" class="pgOne">
+            <div class="centerBox">
+                <div class="leftBox"><i class="fa-regular fa-hand-back-fist cursorStyle" onclick="enterGame()"></i></div>
+                <div class="midBox"><i class="fa-regular fa-hand cursorStyle" onclick="enterGame()"></i></div>
+                <div class="rightBox"><i class="fa-regular fa-hand-scissors cursorStyle" onclick="enterGame()"></i></div>
+            </div>
+        </div>
+
+<!---------------------SECOND PAGE BELOW----------------------->
+
+        <div id="pageTwo" class="hide" >
+            <div class="pgTwoMain">
+                <form>
+                    <input type="text" placeholder="NAME:" class="yourName" id="blankName" onkeypress="enterName(event)">
+                </form>
+            </div>
+        </div>
+
+<!---------------------THIRD PAGE BELOW----------------------->
+
+
+        <div id="pageThree" class="hide">
+
+            <div class="pgThreeMain">
+                <div class="characterSlt cursorDefault">CHOOSE YOUR CHARACTER:</div>
+                <div class=characterPics>
+                    
+                    <div class="leftCharBox">
+                        <div class="portBorder hippo cursorStyle"><i class="fa-solid fa-hippo" id="hippoChar" onclick="chooseCharacter('1')"></i></div>    
+                        <div class="confirm cursorStyle hide" id="conf1" onclick="confirmCharacter('1')">CONFIRM?</div>
+                    </div>
+                    
+                    <div>
+                        <div class="portBorder dragon cursorStyle"><i class="fa-solid fa-dragon" id="dragonChar" onclick="chooseCharacter('2')"></i></div>
+                        <div class="confirm cursorStyle hide" id="conf2" onclick="confirmCharacter('2')">CONFIRM?</div>
+                    </div>
+                    
+                    <div class="rightCharBox">
+                        <div class="portBorder bird cursorStyle"><i class="fa-solid fa-crow" id="birdChar" onclick="chooseCharacter('3')"></i></div> 
+                        <div class="confirm cursorStyle hide" id="conf3" onclick="confirmCharacter('3')">CONFIRM?</div>
+                    </div>        
+                
+                </div>
+            </div>
+        
+        </div> 
+
+
+
+<!---------------------FOURTH PAGE BELOW----------------------->
+
+        <div id="pageFour" class="pageFourMain hide">
+
+            <div class="resultsBar">
+
+                <div class="leftChar">
+                    <div class="CharPortrait"><i class="fa-solid draGon" id="userCharacter"></i></div>
+                </div>
+
+                <div class="leftCharPt2">
+                    <div class="numberWins maBob leftPad cursorDefault"><span id="playerWins">0</span>&nbsp;<span>WINS</span></div>
+                    <div class="healthBar"></div>
+                    <div class="leftCharName maBob leftPad cursorDefault" id="playerName"></div>
+                </div>
+
+                <div class="resultsMid">
+                    <div class="midPortrait">
+                        <div class="resultsNumber cursorDefault" id="rounds">1</div>
+                    </div>
+                </div>
+
+                <div class="rightCharPt2">
+                    <div class="numberWins maBob rightPad cursorDefault"><span id="computerWins">0</span>&nbsp;<span>WINS</span></div>
+                    <div class="healthBar"></div>
+                    <div class="rightCharName maBob rightPad cursorDefault">COMPUTER</div>
+                </div>
+
+                <div class="rightChar">
+                    <div class="CharPortrait"><i class="fa-solid fa-robot roBot"></i></div>
+                </div>
+            
+            </div>
+
+            <div class="frtPageWrap">
+                <div class="centerBox4">
+
+                    <div class="bothSides">
+                        <div>
+                            <i class="fa-solid fa-hand-back-fist cursorStyle" id="rockAttack" onclick="playerAttack('1')"></i>
+                            <i class="fa-solid fa-hand cursorStyle" id="paperAttack" onclick="playerAttack('2')"></i>
+                            <i class="fa-solid fa-hand-scissors cursorStyle" id="scissorAttack" onclick="playerAttack('3')"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="lineSide">
+                        <div class="line"></div>
+                    </div>
+                    
+                    <div class="bothSides">
+                        <div class="cursorDefault" id="compAttack">?</div>
+                        <div><i class="fa-solid fa-hand-back-fist hide" id="rockAttackComp"></i></div>
+                        <div><i class="fa-solid fa-hand hide" id="paperAttackComp"></i></div>
+                        <div><i class="fa-solid fa-hand-scissors hide" id="scissorsAttackComp"></i></div>
+                    </div>
+
+                    <div class="win playerResult cursorDefault hide" id="winResult">WIN</div>
+                    <div class="lose playerResult cursorDefault hide" id="loseResult">LOSE</div>
+                    <div class="draw playerResult cursorDefaul hide" id="drawResult">DRAW</div>
+                    <div class="playAgain cursorStyle hide" id="playAgain" onclick="replay()">PLAY AGAIN?</div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+
+</html>

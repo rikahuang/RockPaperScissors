@@ -302,6 +302,7 @@ input:focus {
 
     .centerBox {
         font-size: 120px;
+        flex-direction: column;
     }
 
     .portBorder {
@@ -310,19 +311,23 @@ input:focus {
     }
 
     .leftBox {
-        padding-right: 85px;
+        padding-right: unset;
     }
 
     .rightBox {
-        padding-left: 85px;
+        padding-left: unset;
     }
 
     .yourName {
-        font-size: 120px;
+        font-size: 70px;
     }
 
     .characterSlt {
         font-size: 30px;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
 
     .mFontSZ70px {
@@ -334,7 +339,7 @@ input:focus {
     }
 
     .leftChar {
-        width: 10%;
+        width: 15%;
     }
 
     .CharPortrait {
@@ -351,7 +356,7 @@ input:focus {
     }
 
     .resultsMid {
-        width: 10%;
+        width: 15%;
     }
 
     .midPortrait {
@@ -367,7 +372,7 @@ input:focus {
     }
 
     .rightChar {
-        width: 10%;
+        width: 15%;
     }
 
     .roBot {
@@ -376,7 +381,7 @@ input:focus {
 
     .leftPad {
         padding-left: unset;
-        font-size: 20px;
+        font-size: 16px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -388,7 +393,7 @@ input:focus {
 
     .rightPad {
         padding-right: unset;
-        font-size: 20px;
+        font-size: 16px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -399,7 +404,7 @@ input:focus {
     }
 
     .bothSides {
-        font-size: 120px;
+        font-size: 90px;
         display: flex;
         justify-content: center;
         align-items: center;  
@@ -427,5 +432,32 @@ input:focus {
     .playAgain {
         transform: translateY(-80px);
     }
+
+    .characterPics {
+        height: 70%;
+        flex-direction: column;
+    }
+
+    .leftCharBox {
+        margin-right: unset;
+        display: flex;
+        justify-content: center;
+    }
+
+    .centerCharBox {
+        display: flex;
+        justify-content: center;
+        padding: 55px 0px;
+    }
     
+    .rightCharBox {
+        margin-left: unset;
+        display: flex;
+        justify-content: center;
+    }
+
+    .playerResult {
+        font-size: 60px;
+    }
+
 }

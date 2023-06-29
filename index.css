@@ -296,3 +296,136 @@ input:focus {
     margin-top: 400px;
 }
 
+/************FOR MOBILE*************/
+
+@media (max-width: 600px) {
+
+    .centerBox {
+        font-size: 120px;
+    }
+
+    .portBorder {
+        width: 120px;
+        height: 120px;
+    }
+
+    .leftBox {
+        padding-right: 85px;
+    }
+
+    .rightBox {
+        padding-left: 85px;
+    }
+
+    .yourName {
+        font-size: 120px;
+    }
+
+    .characterSlt {
+        font-size: 30px;
+    }
+
+    .mFontSZ70px {
+        font-size: 70px;
+    }
+
+    .resultsBar {
+        align-items: center;
+    }
+
+    .leftChar {
+        width: 10%;
+    }
+
+    .CharPortrait {
+        width: 47px;
+        height: 47px;
+    }
+
+    .draGon {
+        font-size: 35px;
+    }
+
+    .leftCharPt2 {
+        width: 35%;
+    }
+
+    .resultsMid {
+        width: 10%;
+    }
+
+    .midPortrait {
+        height: 50px;
+    }
+
+    .resultsNumber {
+        font-size: 35px;
+    }
+
+    .rightCharPt2 {
+        width: 35%
+    }
+
+    .rightChar {
+        width: 10%;
+    }
+
+    .roBot {
+        font-size: 35px;
+    }
+
+    .leftPad {
+        padding-left: unset;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .playerWins {
+        align-content: end;
+    }
+
+    .rightPad {
+        padding-right: unset;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .compWins {
+        align-content: end;
+    }
+
+    .bothSides {
+        font-size: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        width: 100%;
+        height: 47.5%;
+    }
+
+    .centerBox4 {
+        flex-direction: column;
+    }
+
+    .lineSide {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5%;
+    }
+
+    .line {
+        width: 500px;
+        height: 10px;
+    }
+
+    .playAgain {
+        transform: translateY(-80px);
+    }
+    
+}
